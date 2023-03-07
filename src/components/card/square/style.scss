@@ -1,0 +1,28 @@
+.square_card {
+  background-color: hsl(225, 93%, 12%);
+  aspect-ratio: 3/2;
+  width: 400px;
+  color: hsl(50, 43%, 95%);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 10px;
+  &:hover {
+    h2 {
+      color: hsl(173, 80%, 40%);
+    }
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .description {
+    text-align: justify;
+  }
+  .tags {
+    display: flex;
+    gap: 10px;
+    color: hsl(220, 9%, 46%);
+  }
+}

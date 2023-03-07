@@ -1,0 +1,67 @@
+:root {
+  --radius: 20px;
+
+  //Colors
+  --primary: hsl(180, 50%, 50%);
+  --mute: hsl(0, 1%, 60%);
+}
+
+.simple_card {
+  width: 250px;
+  border-radius: var(--radius);
+  position: relative;
+
+  .simple_avatar {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    right: 20px;
+    top: 170px;
+    outline: 1px solid #fff;
+    background-size: cover;
+    background-position: center;
+  }
+  .simple_card_header {
+    height: 200px;
+    border-radius: var(--radius) var(--radius) 0px 0px;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  section {
+    padding: 10px 10px 0 10px;
+
+    .simple_card_body {
+      word-break: break-all;
+      h4 {
+        font-weight: bold;
+      }
+      p {
+        font-size: smaller;
+      }
+    }
+
+    .simple_card_footer {
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      border-radius: 0 0 var(--radius) var(--radius);
+      .icons {
+        display: flex;
+        gap: 10px;
+        span {
+          line-height: 16px;
+        }
+      }
+
+      span {
+        font-size: small;
+        color: var(--mute);
+      }
+    }
+  }
+}

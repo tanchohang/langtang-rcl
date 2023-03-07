@@ -1,0 +1,7 @@
+.simple_gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  align-content: center;
+  // gap: 5px;
+}

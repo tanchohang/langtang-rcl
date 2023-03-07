@@ -1,0 +1,30 @@
+.skeleton_section_item {
+  border: 5px solid #ccc;
+  padding: 2rem;
+  aspect-ratio: 1/1;
+  width: 300px;
+  .image {
+    margin-inline: auto;
+    width: 50%;
+    height: 50%;
+    display: block;
+    background-color: #ccc;
+    margin-bottom: 20px;
+  }
+  .text {
+    margin-inline: auto;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    & > :not(:first-child):not(:nth-child(2)) {
+      background-color: #eeeded;
+    }
+    & > :nth-child(n + 1) {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+    & > :nth-child(2) {
+      margin-bottom: 10px;
+    }
+  }
+}

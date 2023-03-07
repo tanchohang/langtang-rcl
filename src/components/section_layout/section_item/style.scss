@@ -1,0 +1,36 @@
+.sectionItem {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    height: 300px;
+    width: 300px;
+  }
+  .section-text-area {
+    text-align: left;
+    h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
+.flip {
+  flex-direction: row-reverse;
+}
+.vertical {
+  flex-direction: column;
+  text-align: center;
+}
+.vertflip {
+  flex-direction: column-reverse;
+}
+.text-center {
+  text-align: center !important;
+}

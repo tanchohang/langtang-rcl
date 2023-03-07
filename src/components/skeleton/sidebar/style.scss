@@ -1,0 +1,11 @@
+.skeleton-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}

@@ -1,0 +1,26 @@
+.two_column_page_skeleton {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 40px;
+  .content {
+    .text {
+      display: grid;
+      gap: 20px;
+    }
+    .section_items {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      & > * {
+        width: 40%;
+      }
+    }
+  }
+  .image {
+    width: 80%;
+    aspect-ratio: 3/5;
+    margin-inline: auto;
+    background-color: #ccc;
+  }
+}

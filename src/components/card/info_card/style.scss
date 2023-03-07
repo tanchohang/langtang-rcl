@@ -1,0 +1,41 @@
+.info_card {
+  // background-color: hsl(225, 64%, 29%);
+  background-color: hsl(225, 93%, 12%);
+  background-blend-mode: overlay;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 5px 5px 0px hsl(0, 0%, 0%);
+  padding: 20px;
+  cursor: pointer;
+  &:hover {
+    .title {
+      color: hsl(186, 59%, 47%);
+    }
+  }
+
+  .featured_text {
+    color: #31afbd;
+  }
+  .title {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+  }
+  .text {
+    color: hsl(0, 0%, 93%);
+    margin: 5px 0;
+    text-align: justify;
+  }
+  .tags {
+    margin: 5px 0;
+    code {
+      margin-right: 10px;
+      color: hsl(0, 0%, 73%);
+    }
+  }
+  .links {
+    svg {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}

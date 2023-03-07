@@ -1,0 +1,39 @@
+.skeleton_card {
+  header {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    .always {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .title {
+        width: 200px;
+      }
+      .menu {
+        span {
+          display: block;
+          height: 5px;
+          width: 5px;
+          margin-bottom: 2px;
+          background-color: #b1b0b0;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+  }
+  footer {
+    margin-top: 30px;
+    .icons {
+      display: flex;
+      gap: 30px;
+      svg {
+        fill: #b1b0b0;
+      }
+    }
+  }
+}

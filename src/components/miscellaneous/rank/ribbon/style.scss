@@ -1,0 +1,12 @@
+.ribbon {
+  aspect-ratio: 4/6;
+  clip-path: polygon(100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    position: relative;
+    top: -6%;
+    font-weight: 500;
+  }
+}

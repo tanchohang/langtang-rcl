@@ -1,0 +1,12 @@
+.list_slider_section {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20%;
+  // .image_container {
+  // }
+  .list_contaier {
+    li {
+      margin-top: 20px;
+    }
+  }
+}

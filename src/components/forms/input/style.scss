@@ -1,0 +1,28 @@
+.input {
+  label {
+    display: block;
+    font-weight: normal;
+    color: hsl(210, 11%, 15%);
+  }
+  input {
+    display: block;
+    width: 100%;
+    font-weight: normal;
+    color: hsl(210, 11%, 15%);
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding-left: 0.7rem;
+    line-height: 1.5;
+    text-align: start;
+    padding: 0.4rem 0.5rem;
+    &:focus {
+      box-shadow: 0 0 0.5rem 0.2rem rgb(13 110 253 / 25%);
+      border: none;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}

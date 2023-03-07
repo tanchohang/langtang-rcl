@@ -1,0 +1,21 @@
+.section_skeleton {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  .section_items {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+  }
+  .section_content {
+    & > * {
+      margin-bottom: 10px;
+    }
+    .call_to_action {
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #ccc;
+    }
+  }
+}
