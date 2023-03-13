@@ -1,0 +1,17 @@
+.error_display {
+  i {
+    display: inline-block;
+    margin-right: 5px;
+
+    &.cross {
+      stroke-width: 0px;
+      fill: red;
+    }
+    &.tick {
+      stroke-width: 0px;
+      fill: rgb(34 197 94);
+      border: none;
+      outline: none;
+    }
+  }
+}

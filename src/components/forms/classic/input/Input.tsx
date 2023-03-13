@@ -5,9 +5,18 @@ export interface ImputIProps {
   label: string;
   type: string;
   size: 'sm' | 'md' | 'lg';
+  hasError?: boolean;
+  floatingLabel?: boolean;
 }
 
-const Input = ({ name, label, size, ...props }: ImputIProps) => {
+const Input = ({
+  name,
+  label,
+  size,
+  hasError,
+  floatingLabel,
+  ...props
+}: ImputIProps) => {
   const height = new Map([
     ['sm', 1.3],
     ['md', 1.5],
@@ -15,16 +24,19 @@ const Input = ({ name, label, size, ...props }: ImputIProps) => {
   ]);
   return (
     <div className="input">
-      <label
-        htmlFor={name}
-        style={{
-          fontSize: `${height.get(size)}rem`,
-        }}
-      >
-        {label}:
-      </label>
+      {!floatingLabel && (
+        <label
+          htmlFor={name}
+          style={{
+            fontSize: `${height.get(size)}rem`,
+          }}
+        >
+          {label}:
+        </label>
+      )}
       <input
         name={name}
+        placeholder={floatingLabel ? label : ''}
         {...props}
         style={{
           fontSize: `${height.get(size)! - 0.3}rem`,

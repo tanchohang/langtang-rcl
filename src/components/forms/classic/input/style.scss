@@ -1,4 +1,4 @@
-.input {
+div.input {
   label {
     display: block;
     font-weight: normal;
@@ -6,6 +6,7 @@
   }
   input {
     display: block;
+    appearance: none;
     width: 100%;
     font-weight: normal;
     color: hsl(210, 11%, 15%);

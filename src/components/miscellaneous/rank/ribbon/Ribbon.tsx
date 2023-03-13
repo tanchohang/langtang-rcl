@@ -1,3 +1,4 @@
+import './style.scss';
 export interface IRibbonProps {
   rank: number;
   backgroundColor: string;

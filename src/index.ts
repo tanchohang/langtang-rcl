@@ -1,1 +1,3 @@
-export { SimpleAvatar } from './components/avatar';
+export * from './components';
+
+import './styles/global.css';

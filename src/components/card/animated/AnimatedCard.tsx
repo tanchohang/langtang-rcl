@@ -1,5 +1,5 @@
 import { SimpleAvatar } from '../../avatar/Simple/SimpleAvatar';
-import { Button } from '../../button';
+import { Button } from '@/components/button/button';
 import { Ribbon } from '../../miscellaneous/rank/ribbon/Ribbon';
 import './style.scss';
 export interface IAnimatedCardProps {
@@ -58,7 +58,7 @@ export function AnimatedCard({ imgUrl, title }: IAnimatedCardProps) {
           <span>20k</span>
         </div>
         <div>
-          <Button label="see more" />
+          <Button>see more</Button>
         </div>
         <div className="users">
           <SimpleAvatar

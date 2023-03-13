@@ -20,6 +20,10 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/components/*": ["./src/components/*"]
+    }
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.stories.tsx"],

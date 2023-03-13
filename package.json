@@ -1,9 +1,11 @@
 {
   "name": "@tanchohang/langtang-rcl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A React Js Component Library",
   "type": "module",
-  "author": "tanchohang limbu",
+  "author": {
+    "name": "tanchohang limbu"
+  },
   "license": "MIT",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -18,12 +20,13 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module CommonJS --outDir ./dist/cjs",
     "preview": "vite preview",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "concurrently yarn:watch:*",
     "watch:storybook": "start-storybook -p 6006",
-    "watch:tailwind": "npx tailwindcss -i ./src/index.css -o ./src/styles/output.css --watch",
-    "buildt:tailwind": "npx tailwindcss -i ./src/index.css -o ./src/styles/output.css",
-    "build-storybook": "build-storybook",
-    "build-lib": "rollup -c"
+    "watch:tailwind": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --watch",
+    "build:tailwind": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css",
+    "build-storybook": "yarn build:tailwind && build-storybook",
+    "build-lib": "rollup -c",
+    "chromatic": "npx chromatic --project-token=bcc9462f8f7d"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -52,6 +55,7 @@
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
     "chromatic": "^6.17.1",
+    "class-variance-authority": "^0.4.0",
     "concurrently": "^7.6.0",
     "css-loader": "^6.7.3",
     "postcss": "^8.4.21",
@@ -64,12 +68,16 @@
     "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.58.3",
     "sass-loader": "^13.2.0",
+    "storybook-dark-mode": "^2.1.1",
     "style-loader": "^3.3.1",
     "tailwindcss": "^3.2.6",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "vite-tsconfig-paths": "^4.0.5"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/tanchohang"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "@tanchohang/langtang-rcl@0.0.0"
 }
