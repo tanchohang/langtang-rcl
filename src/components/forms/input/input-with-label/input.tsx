@@ -1,4 +1,4 @@
-import { forwardRef, InputHTMLAttributes } from 'react';
+import { forwardRef } from 'react';
 import { Label } from '../../label/label';
 import { Input } from '../default/input';
 

@@ -11,7 +11,9 @@ node_modules
 dist
 dist-ssr
 lib
+.rollup.cache
 *.local
+
 
 # Editor directories and files
 .vscode/*

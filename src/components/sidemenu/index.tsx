@@ -1,1 +1,6 @@
-export { Sidemenu } from './Sidemenu';
+export {
+  Sidemenu,
+  SidemenuItem,
+  SidemenuItemTitle,
+  LucideIcon,
+} from './Sidemenu';

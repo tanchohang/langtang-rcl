@@ -4,7 +4,7 @@ export * from './blog';
 export * from './forms';
 export * from './card';
 export * from './gallery';
-// export * from './header';
+export * from './header/Header';
 export * from './miscellaneous';
 
 export * from './section_layout';

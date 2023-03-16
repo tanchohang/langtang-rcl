@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Button } from '../button/button';
 import './header.css';
 
@@ -52,16 +50,16 @@ export const Header = ({
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
-            <Button size="sm" onClick={onLogout}>
+            <Button variant="default" size="sm" onClick={onLogout}>
               Log out
             </Button>
           </>
         ) : (
           <>
-            <Button size="sm" onClick={onLogin}>
+            <Button variant="default" size="sm" onClick={onLogin}>
               Log in
             </Button>
-            <Button size="sm" onClick={onCreateAccount}>
+            <Button variant="default" size="sm" onClick={onCreateAccount}>
               Sign up
             </Button>
           </>

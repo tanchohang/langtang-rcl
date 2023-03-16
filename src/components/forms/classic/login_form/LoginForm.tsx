@@ -9,7 +9,9 @@ const LoginForm = ({}: LoginFormIProps) => {
       <ErrorDisplay text="username or password does not match." show={true} />
       <Input name="username" label="Username" type="text" size="md" />
       <Input name="password" label="Password" type="password" size="md" />
-      <Button className="mt-5 w-[100%]">Login</Button>
+      <Button variant="default" size="md" className="mt-5 w-[100%]">
+        Login
+      </Button>
       or Signup
     </div>
   );

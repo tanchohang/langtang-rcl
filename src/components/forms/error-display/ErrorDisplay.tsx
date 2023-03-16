@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import './style.scss';
 export interface ErrorDisplayIProps {
   text: string;

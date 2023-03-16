@@ -6,5 +6,5 @@
 <br/>
 
 ```
- npm install @tanchohang/langtang-rcl@0.0.0
+ npm install @tanchohang/langtang-rcl
 ```

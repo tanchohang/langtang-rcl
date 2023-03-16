@@ -18,7 +18,7 @@ div.input {
     text-align: start;
     padding: 0.4rem 0.5rem;
     &:focus {
-      box-shadow: 0 0 0.5rem 0.2rem rgb(13 110 253 / 25%);
+      box-shadow: 0 0 0.5rem 0.2rem hsla(216, 98%, 52%, 0.25);
       border: none;
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }

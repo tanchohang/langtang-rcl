@@ -58,7 +58,9 @@ export function AnimatedCard({ imgUrl, title }: IAnimatedCardProps) {
           <span>20k</span>
         </div>
         <div>
-          <Button>see more</Button>
+          <Button variant="default" size="md">
+            see more
+          </Button>
         </div>
         <div className="users">
           <SimpleAvatar

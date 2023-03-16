@@ -2,30 +2,30 @@
   "name": "@tanchohang/langtang-rcl",
   "version": "0.0.1",
   "description": "A React Js Component Library",
-  "type": "module",
   "author": {
     "name": "tanchohang limbu"
   },
+  "type": "module",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "builda": "tsc && vite build",
-    "build": "rm -rf /dist && yarn build:esm && yarn build:cjs",
+    "build": "rm -rf dist/ && yarn build:esm && yarn build:cjs",
     "build:esm": "tsc",
-    "build:cjs": "tsc --module CommonJS --outDir ./dist/cjs",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
     "preview": "vite preview",
     "storybook": "concurrently yarn:watch:*",
     "watch:storybook": "start-storybook -p 6006",
     "watch:tailwind": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css --watch",
-    "build:tailwind": "npx tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/output.css",
+    "build:tailwind": "NODE_ENV=production npx tailwindcss -i ./src/styles/tailwind.css -o ./dist/tailwind.css --minify",
+    "build:postcss": "NODE_ENV=production postcss ./src/styles/tailwind.css -o dist/tailwind.min.css",
     "build-storybook": "yarn build:tailwind && build-storybook",
-    "build-lib": "rollup -c",
+    "build-lib": "rollup -c && yarn build:postcss",
     "chromatic": "npx chromatic --project-token=bcc9462f8f7d"
   },
   "peerDependencies": {
@@ -58,7 +58,11 @@
     "class-variance-authority": "^0.4.0",
     "concurrently": "^7.6.0",
     "css-loader": "^6.7.3",
+    "cssnano": "^5.1.15",
+    "node-sass": "^8.0.0",
     "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-modules": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.15.0",
@@ -66,7 +70,7 @@
     "rollup-plugin-dts": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "sass": "^1.58.3",
+    "sass": "^1.59.3",
     "sass-loader": "^13.2.0",
     "storybook-dark-mode": "^2.1.1",
     "style-loader": "^3.3.1",
@@ -74,6 +78,10 @@
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
     "vite-tsconfig-paths": "^4.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanchohang/langtang-rcl.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/tanchohang"
